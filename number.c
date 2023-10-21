@@ -21,7 +21,7 @@ char *convert(long int num, int base, int flags, params_t *params)
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
 		n = -num;
-		sign = '_';
+		sign = '-';
 
 	}
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
@@ -62,7 +62,7 @@ int print_unsigned(va_list ap, params_t *params)
 
 
 /**
- * print_address - print address
+ * print_address - prints address
  * @ap: argument pointer
  * @params: the parameter struct
  *
